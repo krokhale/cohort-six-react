@@ -9,7 +9,6 @@ export default function Functional() {
     // const [text, setText] = useState('');
     // const [obj, setObj] = useState({as});
 
-
     useEffect(() => {
         console.log('Effect was triggered!');
     }, [])
