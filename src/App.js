@@ -14,6 +14,9 @@ import Users from "./users";
 import About from "./about";
 import ChildComponent from "./child-component";
 import Functional from "./functional";
+import Login from "./login";
+import Dashboard from "./dashoard";
+import SignUp from "./sign-up";
 
 // const Home = () => <div>Home</div>;
 // const About = () => <div>About</div>;
@@ -125,12 +128,12 @@ class App extends React.Component {
     return (
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            {/*<img src={logo} className="App-logo" alt="logo" />*/}
 
 
-            <Functional />
+            {/*<Functional />*/}
 
-            <ChildComponent />
+            {/*<ChildComponent />*/}
 
 
 
@@ -138,44 +141,47 @@ class App extends React.Component {
 
             <BrowserRouter>
               <div>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/users">Users</Link>{" "}
-                  </li>
-                </ul>
+                {/*<ul>*/}
+                {/*  <li>*/}
+                {/*    <Link to="/">Home</Link>*/}
+                {/*  </li>*/}
+                {/*  <li>*/}
+                {/*    <Link to="/about">About</Link>*/}
+                {/*  </li>*/}
+                {/*  <li>*/}
+                {/*    <Link to="/users">Users</Link>{" "}*/}
+                {/*  </li>*/}
+                {/*</ul>*/}
                 <hr />
                 {/*<Route exact path="/" component={App} />*/}
                 <Route path="/about" component={About} />
                 <Route path="/users" component={Users} />
+                <Route path="/login" component={Login} />
+                <Route path="/signup" component={SignUp} />
+                <Route path="/dashboard" component={Dashboard} />
               </div>
             </BrowserRouter>
 
 
 
-            <h1>{this.state.name}</h1>
+            {/*<h1>{this.state.name}</h1>*/}
 
 
 
 
-            <Button text={'Show user name'}
-                    onButtonClick={this.showName}
-                    textColor={'#fff'}
-                    padding={'15px'}
-                    backgroundColor={'blue'}  />
+            {/*<Button text={'Show user name'}*/}
+            {/*        onButtonClick={this.showName}*/}
+            {/*        textColor={'#fff'}*/}
+            {/*        padding={'15px'}*/}
+            {/*        backgroundColor={'blue'}  />*/}
 
-            {this.state.items.map((item) => {
-              return <Button text={item}
-                             onButtonClick={this.showName}
-                             textColor={'#fff'}
-                             padding={'15px'}
-                             backgroundColor={'blue'}  />
-            })}
+            {/*{this.state.items.map((item) => {*/}
+            {/*  return <Button text={item}*/}
+            {/*                 onButtonClick={this.showName}*/}
+            {/*                 textColor={'#fff'}*/}
+            {/*                 padding={'15px'}*/}
+            {/*                 backgroundColor={'blue'}  />*/}
+            {/*})}*/}
 
             {/*<Button text={'Click this'}*/}
             {/*        textColor={'#fff'}*/}
@@ -185,48 +191,48 @@ class App extends React.Component {
 
 
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
 
 
 
 
-            {this.state.items.map((item) => {
-              return <p key={item}>{item}</p>
-            })}
+            {/*{this.state.items.map((item) => {*/}
+            {/*  return <p key={item}>{item}</p>*/}
+            {/*})}*/}
 
-            <input onChange={this.showFirstName}/>&nbsp;&nbsp;
-            {/*<input onChange={this.updateFirstName}/>&nbsp;&nbsp;*/}
+            {/*<input onChange={this.showFirstName}/>&nbsp;&nbsp;*/}
+            {/*/!*<input onChange={this.updateFirstName}/>&nbsp;&nbsp;*!/*/}
 
-            <p>{this.state.myText}</p>
+            {/*<p>{this.state.myText}</p>*/}
 
-            <button onClick={this.showAnAlert}>Click me</button>
+            {/*<button onClick={this.showAnAlert}>Click me</button>*/}
 
-            <p style={{color: this.state.textColor}} className={this.state.count<5 ? 'less-than-10-class' : 'greater-than-10-class'}>Count: {this.state.count}</p>
+            {/*<p style={{color: this.state.textColor}} className={this.state.count<5 ? 'less-than-10-class' : 'greater-than-10-class'}>Count: {this.state.count}</p>*/}
 
-            {this.state.count==5 ? <h1>The count is 5!</h1> : <h1>The count is not 5!</h1>}
+            {/*{this.state.count==5 ? <h1>The count is 5!</h1> : <h1>The count is not 5!</h1>}*/}
 
-            {(this.state.count==5) && (this.state.myText=='Jane') && <h1>The count is 5 and the text is Jane!</h1>}
+            {/*{(this.state.count==5) && (this.state.myText=='Jane') && <h1>The count is 5 and the text is Jane!</h1>}*/}
 
-            <br/>
-            <br/>
-            <br/>
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
 
-            <select name="" id="states">
+            {/*<select name="" id="states">*/}
 
-            </select>
+            {/*</select>*/}
 
-            <input onChange={this.updateLastName}/>
+            {/*<input onChange={this.updateLastName}/>*/}
 
-            <br/>
-            <button onClick={this.createDog}>Create a dog!</button>
+            {/*<br/>*/}
+            {/*<button onClick={this.createDog}>Create a dog!</button>*/}
 
-            <br/>
-            <br/>
+            {/*<br/>*/}
+            {/*<br/>*/}
 
             {this.state.dogs && this.state.dogs.map((dog) => {
               return <div key={dog.id}>
@@ -239,17 +245,17 @@ class App extends React.Component {
             <button onClick={this.fetchDogs}>Show all the dogs</button>
 
 
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+            {/*<p>*/}
+            {/*  Edit <code>src/App.js</code> and save to reload.*/}
+            {/*</p>*/}
+            {/*<a*/}
+            {/*    className="App-link"*/}
+            {/*    href="https://reactjs.org"*/}
+            {/*    target="_blank"*/}
+            {/*    rel="noopener noreferrer"*/}
+            {/*>*/}
+            {/*  Learn React*/}
+            {/*</a>*/}
           </header>
         </div>
     );
